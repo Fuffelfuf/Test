@@ -1,39 +1,27 @@
 ﻿// ConsoleApplication-4.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
-#include<iostream>
-#include<iomanip>
-#include"windows.h"
+#include <iostream>
+#include "windows.h"
+#include <time.h>
 using namespace std;
-int main()
+void main()
 {
-    FILE* f;
-    FILE* d;
-    int i, j, a=0,b;
-    char name_in_f[] = "input.txt";
-    char name_in_d[] = "input1.txt";
-    int mas[3][3];
-    errno_t err;
-    err = fopen_s(&f, name_in_f, "w");
-    err = fopen_s(&d, name_in_d, "w");
-    if (f!=0)
-    srand(time(0));
-            for (j = 0; j < 3; j++)
-            {
-                for (int i = 0; i < 3; i++)
-                {
-                    
-                    mas[i][j] = rand()%200;
-                    
-                    fprintf(f, "%d%c", mas[i][j], ' ');
-                    cout << mas[i][j] << ' ';
-                    if (mas[i][j] > a) a = mas[i][j];
-                } 
-                if (d != 0)
-                cout << "max=" << a << endl;
-                fprintf(f, "\n");
-                fprintf(d, "max=%d\n",a);
-                a = 0;
-        }
+    int i, k, n=0;
+    int mas[11];
+    srand(time(NULL));
+    for (int i = 0; i < 11; i++)
+    {
+        mas[i] = rand() % (101) - 50;
+         cout << mas[i] << ' ';
+    } cout << endl;
+    for (int i = 0; i < 11; i++)
+    {
+        if (i % 2 == 0 && i != 0)cout << mas[i] << ' ';
+    } cout << endl;
+    for (int i = 0; i < 11; i++)
+    {
+        if (mas[i] < 0 && n<i) n = i;
+    } cout << n;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
