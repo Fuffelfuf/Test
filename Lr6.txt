@@ -1,0 +1,28 @@
+#include <iostream>
+#include <iomanip>
+#include <windows.h>
+#include <Math.h>
+using namespace std;
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	double y, x, x1, x2, h;
+	cin >> x1 >> x2 >> h;
+	x = x1;
+	do
+	{
+		y =pow(x,1./2)+3*abs(x)+x*x;
+		cout << setw(10) << x << setw(10) << y << endl;
+		x += h;
+
+	} while (x <= x2);
+	cout << "-----------------------" << endl;
+	x = x1;
+	while (x <= x2)
+	{
+		y = pow(x, 1. / 2) + 3 * abs(x) + x * x;
+		cout << setw(10) << x << setw(10) << y << endl;
+		x += h;
+	}
+}
