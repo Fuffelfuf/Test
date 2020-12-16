@@ -1,46 +1,22 @@
 #include <iostream>
-#include "windows.h"
-#include <time.h>
+#include <Math.h>
 using namespace std;
-void main()
+int main()
 {
-    int i, k, n=0;
-    int mas[11];
-    srand(time(NULL));
-    for (int i = 0; i < 11; i++)
-    {
-        mas[i] = rand() % (101) - 50;
-         cout << mas[i] << ' ';
-    } cout << endl;
-    for (int i = 0; i < 11; i++)
-    {
-        if (i % 2 == 0 && i != 0)cout << mas[i] << ' ';
-    } cout << endl;
-    for (int i = 0; i < 11; i++)
-    {
-        if (mas[i] < 0 && n<i) n = i;
-    } cout << n;
-}
------------------------------------------
-#include <iostream>
-#include "windows.h"
-#include <time.h>
-using namespace std;
-void main()
-{
-    int i, k, n=0;
-    int mas[11] = {6,84,11,-3,-16,7,18,-9,10,15,0};
-    srand(time(NULL));
-    for (int i = 0; i < 11; i++)
-    {
-         cout << mas[i] << ' ';
-    } cout << endl;
-    for (int i = 0; i < 11; i++)
-    {
-        if (i % 2 == 0 && i != 0)cout << mas[i] << ' ';
-    } cout << endl;
-    for (int i = 0; i < 11; i++)
-    {
-        if (mas[i] < 0 && n<i) n = i;
-    } cout << n;
+	int x, Y = 0,i;
+	cout << "input x" << endl;
+	cin >> x;
+	for (i = 1; i < 6; i++)
+	{
+		Y = Y + pow(i, 3);
+	}
+	cout << "Y=" << (log(Y) + 2 * pow(sin(x), 2) / (pow(x, 2) + 5))<<endl;
+	int Z = 1, m, y;
+	cout << "input y" << endl;
+	cin >> y;
+	for (m = 1; m < 5; m++)
+	{
+		Z = Z * cos(m * y);
+	}
+	cout << "Z=" << Z + 2 * y << endl;
 }
