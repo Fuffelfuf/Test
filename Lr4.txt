@@ -1,0 +1,51 @@
+#include <iostream>
+#include <iomanip>
+#include <Windows.h>
+using namespace std;
+int main()
+{
+	int a;
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	cout << "¬ведите a" << endl;
+	cin >> a;
+	cout <<"–езультат " << a % 100 << a / 100 << endl;
+}
+----------------------
+#include <iostream>
+#include <Windows.h>
+#include <Math.h>
+using namespace std;
+int main()
+{
+	double a,x,y,Z;
+	const double pi = 3.14;
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	printf("¬ведите x\n");
+	scanf_s("%lf", &x);
+	printf("¬ведите y\n");
+	scanf_s("%lf", &y);
+	printf("¬ведите Z\n");
+	scanf_s("%lf", &Z);
+	a = ((3 + exp(y - 1)) / (1 + x * x * abs(y - tan(Z * pi / 180)) + tan(155 * pi / 180)));
+	printf("a=%lf", a);
+}
+-----------------------------------------------
+#include <iostream>
+#include <Windows.h>
+#include <Math.h>
+using namespace std;
+int main()
+{
+	double b,x,y;
+	const double pi = 3.14;
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	printf("¬ведите x\n");
+	scanf_s("%lf", &x);
+	printf("¬ведите y\n");
+	scanf_s("%lf", &y);
+	b = 1 + pow(y - x, 1. / 3) + pow(y - x, 2) / 2 + pow(abs(y - x), 3) / 3;
+	printf("a=%lf", a);
+}
